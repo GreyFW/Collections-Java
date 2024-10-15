@@ -76,6 +76,18 @@ public class Main {
             }
             case 4: {
 
+                System.out.print("\nВведите ваш текст: ");
+                String input;
+                scanner.nextLine(); // убираем "остатки" предыдущих вводов;
+
+                if (scanner.hasNextLine()) {
+                    input = scanner.nextLine();
+                } else {
+                    System.out.println("Некорректный ввод.");
+                    return;
+                }
+                TaskFour taskFourObj = new TaskFour(input);
+
                 break;
             }
             case 5: {
