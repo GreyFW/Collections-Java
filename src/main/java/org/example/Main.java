@@ -91,6 +91,23 @@ public class Main {
                 break;
             }
             case 5: {
+                System.out.println("Для примера: ");
+                Map<Integer, String> input = new HashMap<>();
+                input.put(10, "ten");
+                input.put(21, "twenty one");
+                input.put(13, "thirteen");
+                input.put(7, "seven");
+
+                System.out.println("До того, как поменяли местами: ");
+                System.out.println(input);
+
+                System.out.println("После того, как поменяли местами: ");
+                TaskFive taskFiveObj = new TaskFive();
+                Map<String, Integer> swapped = taskFiveObj.swapKeysValues(input);
+                System.out.println(swapped);
+
+                System.out.println();
+
                 break;
             }
 
