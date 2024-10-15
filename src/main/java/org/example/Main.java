@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,9 +49,33 @@ public class Main {
                 break;
             }
             case 3: {
+                List<Human> humans = new ArrayList<>();
+                humans.add(new Human("Peter","Parker", 15));
+                humans.add(new Human("Miles", "Morales", 13));
+                humans.add(new Human("Jessica", "Drew", 20));
+                humans.add(new Human("Gwendolyn", "Stacy", 19));
+
+                // a) HashSet; не гарантирует никакого порядка элементов
+                HashSet<Human> humansHashSet = new HashSet<>(humans);
+                System.out.println("a) " + humansHashSet);
+
+                // b) LinkedHashSet; в порядке добавления
+                LinkedHashSet<Human> humansLinkedHS = new LinkedHashSet<>(humans);
+                System.out.println("b) " + humansLinkedHS);
+
+                // c) TreeSet сортирует по естественному порядку (comparable implementation), у нас по возрасту
+                TreeSet<Human> humansTreeSet = new TreeSet<>(humans);
+                System.out.println("c) " + humansTreeSet);
+
+                // d) Пустой TreeSet, отсортир. по фамилии
+                TreeSet<Human> humansTreeSetComparator = new TreeSet<>(new HumanComparatorByLastName());
+                humansTreeSetComparator.addAll(humans);
+                System.out.println("d) " +  humansTreeSetComparator);
+
                 break;
             }
             case 4: {
+
                 break;
             }
             case 5: {
