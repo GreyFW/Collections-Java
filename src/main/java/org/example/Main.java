@@ -33,6 +33,19 @@ public class Main {
                 break;
             }
             case 2: {
+                System.out.print("\nВведите количество простых чисел на генерацию: ");
+                int n;
+                if (scanner.hasNextInt()) {
+                    n = scanner.nextInt();
+                } else {
+                    System.out.println("Некорректный ввод.");
+                    return;
+                }
+
+                PrimesGenerator taskTwo = new PrimesGenerator(n);
+                PrimeGeneratorTest primesTest = new PrimeGeneratorTest(taskTwo);
+                primesTest.show();
+
                 break;
             }
             case 3: {
