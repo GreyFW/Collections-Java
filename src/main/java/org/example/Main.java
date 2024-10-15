@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите номер задания: ");
+        System.out.print("Введите номер задания: ");
         int taskNumber;
 
         if (scanner.hasNextInt()) {
@@ -18,7 +18,7 @@ public class Main {
 
         switch (taskNumber) {
             case 1: {
-                System.out.print("Введите размер массива: ");
+                System.out.print("\nВведите размер массива: ");
                 int size;
 
                 if (scanner.hasNextInt()) {
@@ -28,18 +28,21 @@ public class Main {
                     break;
                 }
 
+                TaskOne taskOneObj = new TaskOne();
+                taskOneObj.firstTaskArray(size);
+                break;
             }
             case 2: {
-
+                break;
             }
             case 3: {
-
+                break;
             }
             case 4: {
-
+                break;
             }
             case 5: {
-
+                break;
             }
 
             default: {
